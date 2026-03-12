@@ -1,0 +1,74 @@
+.ai-terminal {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: clamp(16px, 3vw, 24px);
+  padding: clamp(16px, 3vw, 24px);
+  width: clamp(280px, 90vw, 320px);
+  height: auto;
+  max-height: clamp(400px, 70vh, 650px);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.5s ease;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sidebar-header h3 {
+  font-size: clamp(0.65rem, 2vw, 0.8rem);
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  word-break: break-word;
+}
+
+.ai-messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.ai-message {
+  color: #a5b4fc;
+  margin-bottom: 12px;
+  border-left: 2px solid var(--primary);
+  padding-left: 10px;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .ai-terminal {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    bottom: 0;
+    left: 0;
+    border-radius: 24px 24px 0 0;
+    z-index: 40;
+  }
+}
