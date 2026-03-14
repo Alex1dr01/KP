@@ -22,3 +22,49 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ========================
+# Custom Project Exclusions
+# ========================
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python & Virtual Environments (for report scripts)
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Archives & Backups
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Docs & Reports (Exclude heavy/generated documents, keep README)
+*.docx
+*.pdf
+*.rtf
+*.doc
+!README.md
+!API.txt
+
+# Specific script and text files
+generate_*.py
+docx_extract.txt
+tessst.txt
+ws_docs.html
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
